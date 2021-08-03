@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import MainContainer from "./MainContainer";
+import {useState,useRef} from 'react'
+import SelectionContainer from "./SelectionContainer";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ //document.body.style.zoom = "80%";
+let [lettersConfig,setLettersConfig] = useState([])
+ 
+let [selectedScreen,setSelectedScreen] = useState('MainContainer')
+const childRef = useRef();
+let choosePreset= (presset) =>{
+ 
+childRef.current.choosePresetExternal(presset)
 }
-
+ return <div  >
+      { selectedScreen==='MainContainer'&& <MainContainer setSelectedScreen={setSelectedScreen} selectedScreen={selectedScreen}   emitChoosePreset={choosePreset}   lettersConfig={lettersConfig}
+       >
+     </MainContainer>}
+ 
+    <SelectionContainer  ref={childRef}  setSelectedScreen={setSelectedScreen} selectedScreen={selectedScreen}  getTransformToMainContainerLetterArrayProps={setLettersConfig}
+       >
+     </SelectionContainer>
+  
+  
+  
+ </div>
+ 
+}
+ 
 export default App;
+ 
+
