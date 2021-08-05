@@ -16,7 +16,7 @@ childRef.current.choosePresetExternal(presset)
        >
      </MainContainer>}
  
-    <SelectionContainer  ref={childRef}  setSelectedScreen={setSelectedScreen} selectedScreen={selectedScreen}  getTransformToMainContainerLetterArrayProps={setLettersConfig}
+    <SelectionContainer  ref={childRef}  style={{display:selectedScreen==='MainContainer'?'none':'inline'}} setSelectedScreen={setSelectedScreen} selectedScreen={selectedScreen}  getTransformToMainContainerLetterArrayProps={setLettersConfig}
        >
      </SelectionContainer>
   

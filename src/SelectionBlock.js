@@ -158,7 +158,7 @@ window.addEventListener('resize', returnedFunction)})
  alignItems: 'center'}}>
  
 <div>
-     {lettersArray.map((letters,index)=>{return <div style={{  textAlign:"left",width:'100%',marginTop:index===0?"0px":"24px", visibility:letters.categoryName===''?'hidden':"visible"}}><div onClick={()=>selectByIndex(index)} style={{cursor:"pointer",borderRadius:"5px",padding:"10px", textAlign:"center",backgroundColor:`rgba(${letters.color},1)`,fontWeight:"600"}}>{letters.categoryName} </div>
+     {lettersArray.map((letters,index)=>{return <div style={{  textAlign:"left",width:'100%',marginTop:index===0?"0px":"24px", visibility:letters.categoryName===''?'hidden':"visible"}}><div onClick={()=>selectByIndex(index)} style={{cursor:"pointer",borderRadius:"5px",padding:"10px", textAlign:"center",backgroundColor:`rgba(${letters.color},1)`,fontWeight:"600"}}>{letters.categoryName}<div style={{float:"right"}}>+</div></div>
        <div style={{ borderRadius:"5px",backgroundColor:'white',display:"flex",flexDirection:"column",justifyContent:"center"}}>
      
   
@@ -180,7 +180,7 @@ window.addEventListener('resize', returnedFunction)})
     
     {index2!=0 && <div style={{height:'5px', backgroundColor:'#e1f7fd'}}></div>}
      <br />
-      <span onClick={()=>selectByIndexAndSubCategory(index,subCategoryletters.letters)} style={{cursor:"pointer",fontWeight:"600",marginLeft:"20px"}}>{subCategoryletters.subCategoryName} </span>
+      <span onClick={()=>selectByIndexAndSubCategory(index,subCategoryletters.letters)} style={{cursor:"pointer",fontWeight:"600",marginLeft:"20px",fontStyle:"italic"}}>{subCategoryletters.subCategoryName} </span>
       <br />
     
       

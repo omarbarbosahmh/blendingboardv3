@@ -68,10 +68,10 @@ choosePreset(localStorage.getItem('selectedPreset'))
  <div style={{margin:'auto', width:'70%'}} >
    <br></br>
    <div style={{display:'inline-block'}}>
-     <img src="/assets/logo.png" alt="question" width='280px'></img>
+     <img src="https://omarbarbosahmh.github.io/blendingboardv3/assets/logo.png" alt="logo" width='280px'></img>
      </div>
    <div style={{float:'right',display:'inline-block',cursor:"pointer"}}  onClick={()=>setSelectedScreen("SelectionContainer")}>
-     <img src="/assets/burguer.png" alt="burguer icon" width="50px"></img>
+     <img src="https://omarbarbosahmh.github.io/blendingboard/assets/burguer.png" alt="burguer icon" width="50px"></img>
      </div>
     
  
@@ -89,7 +89,7 @@ choosePreset(localStorage.getItem('selectedPreset'))
    <div style={{margin:"20px",height:"78vh", overflowY:"auto"}}>
  
 <div style={{ width:'90%', float:"left",textAlign:'center'}}>
-<div style={{display: 'inline-block',backgroundColor:"white",padding:"24px"}}>
+<div style={{display: 'inline-block',backgroundColor:"white",padding:"12px"}}>
     {lettersArray.map((letters,index)=>{return <Container
        key = {index}
        style = {letters.style?{...letters.style,marginRight:'24px'}:{}}
@@ -106,7 +106,7 @@ choosePreset(localStorage.getItem('selectedPreset'))
      </div>
    
 </div>
-{[...wordHistory].length!=0 && <div style={{   float:"left",display: 'inline-block',backgroundColor:"white",padding:"24px", overflowY:"scroll",maxHeight:"70vh"}}>
+{[...wordHistory].length!=0 && <div style={{   float:"left",display: 'inline-block',backgroundColor:"white",padding:"8px", overflowY:"scroll",maxHeight:"70vh"}}>
    {[...wordHistory].reverse().map(word=>{return <p style={{fontWeight:'600', fontSize:'30px'}}>{word}</p>})}
 </div>}
  

@@ -48,10 +48,16 @@ pre {
 body{
  background-color:#e1f7fd;
  margin:0px;
- font-family: 'Josefin Sans';
+ font-family: "AvenirPrimaryHMH-Bold";
+ 
 }
  
 html{
   padding:0px;
+  font-size: 16px;
+}
+@font-face{
+  font-family:"AvenirPrimaryHMH-Bold";
+  src:url("./fonts/319f0639-536b-440c-8ca3-df56e4f19ea4.woff2") format("woff2"),url("./fonts/f7be8f07-e06b-41a6-94e9-4b328041df1d.woff") format("woff");
 }
 
