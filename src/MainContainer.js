@@ -88,11 +88,11 @@ choosePreset(localStorage.getItem('selectedPreset'))
    </div>
    <div style={{margin:"20px",height:"78vh", overflowY:"auto"}}>
  
-<div style={{ width:'90%', float:"left",textAlign:'center'}}>
-<div style={{display: 'inline-block',backgroundColor:"white",padding:"12px"}}>
+<div style={{ width:'90%', float:"left",textAlign:'center',marginRight:'-100px'}}>
+<div style={{display: 'inline-block',backgroundColor:"white",padding:"15px"}}>
     {lettersArray.map((letters,index)=>{return <Container
        key = {index}
-       style = {letters.style?{...letters.style,marginRight:'24px'}:{}}
+       style = {letters.style?{...letters.style,marginRight:'24px',gridGap:'12px'}:{}}
        letters = {letters.letters}
        selectedLetters = {letters.selectedLetters}
        color = {letters.color}
